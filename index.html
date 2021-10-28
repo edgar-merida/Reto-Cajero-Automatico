@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JavaScript -->
+    <script src="http://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+    <script src="./class/cuentas.js"></script>
+    <script src="./class/Operaciones.js"></script>
+
+
+
+
+    <title>PROYECTO-CAJERO</title>
+</head>
+
+<body>
+
+    <div class=" container">
+        <div class="row text-gradient">***CAJERO AUTOMATICO***</div>
+        <div class="row" id="contenido">
+            <div class="col-4" id="caja1">
+                <div class="row filacaja"> Cuentas de Clientes </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registros">
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-8" id="caja2">
+                <div class="row filacaja"> Display de Cuenta Cliente </div>
+
+                <div class="form-floating" id="pass" style="display:none;">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+
+                    <label for="floatingPassword" id="registros2">
+
+                    </label>
+                </div>
+                <div id="divAceptar">
+                    <button id="aceptar" type="button" class="btn btn-light" style="display: none;"
+                        onclick="nuevaFuncion()">Aceptar</button>
+                </div>
+
+                <div class="row" id="muestraSaldo">
+
+                    <label id="label" for="colFormLabelLg" style="display: none;"
+                        class="col-sm-2 col-form-label col-form-label-lg">Saldo</label>
+                    <input id="saldo" class="form-control" type="text" value=" " style="display: none;"
+                        aria-label="Disabled input example" disabled readonly>
+                </div>
+                
+
+            </div>
+        </div>
+        <div class="row" id="botonesLista">
+            <div class="col-5 botones" id="boton1">
+                <button id="bot1" type="button" class="btn btn-primary" style="display: '';"
+                    onclick="agregarDatos()">Crear Nueva Cuenta</button>
+            </div>
+
+            <div class="col-2 botones" id="boton2">
+                <button id="bot2" type="button" class="btn btn-warning" onclick="retirarSaldo()"
+                    style="display: none;">Retirar Dinero</button>
+            </div>
+            <div class="col-2 botones" id="boton3">
+                <button id="bot3" type="button" class="btn btn-success" onclick="sumarSaldo()"
+                    style="display: none;">Depositar Dinero</button>
+            </div>
+            <div class="col-2 botones" id="boton4">
+                <button id="botSalir" type="button" class="btn btn-danger" style="display: none;"
+                onclick="salir()">Salir</button>
+            </div>
+        
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="./script.js"></script>
+
+</html>
